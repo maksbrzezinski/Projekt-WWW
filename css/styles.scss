@@ -1,0 +1,400 @@
+@import "colors";
+@import "animation";
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+.navbar {
+	text-transform: uppercase;
+	z-index: 2;
+
+	a,
+	i {
+		color: $white;
+	}
+
+	a:hover {
+		color: $main-color;
+	}
+
+	.active {
+		color: $main-color !important;
+	}
+
+	i {
+		padding: 10px;
+	}
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: background-color 0.6s;
+}
+
+.blue-text {
+	color: $main-color;
+	font-weight: bold;
+}
+
+header {
+	#home {
+		position: relative;
+		height: 100vh;
+		width: 100vw;
+		background: url("/img/Programming_small.jpeg") no-repeat center/200%;
+		background-attachment: fixed;
+		overflow: hidden;
+
+		.blur {
+			backdrop-filter: blur(5px);
+			background-color: rgba(0, 0, 0, 0.45);
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+			color: rgb(3, 39, 115);
+		}
+
+		.textCenter {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+			color: $white;
+			z-index: 1;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		h1 {
+			font-size: clamp(1.65rem, 0.3077rem + 3.0769vw, 3rem);
+			text-transform: uppercase;
+		}
+		p {
+			font-size: clamp(0.85rem, 0.3269rem + 0.7692vw, 1rem);
+		}
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		font-size: 40px;
+		align-items: center;
+		justify-content: center;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white;
+	}
+}
+
+body {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	background: #444;
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.underline {
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+	margin: 0 auto 40px;
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-card-title {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.aboutus-card-text {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.apps-for-users {
+	position: relative;
+	background: url("/img/Apps_small.jpeg") no-repeat center/220%;
+	color: $apps-for-users;
+	z-index: 0;
+
+	i {
+		font-size: 36px;
+	}
+
+	.apps-fu-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+
+	.apps-for-users-item {
+		margin: 10px 0;
+
+		.apps-for-users-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.portfolio {
+	background-color: $bg-color;
+
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.prices {
+	.prices-items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.prices-card-title {
+		font-size: 18px;
+	}
+
+	.underline-prices {
+		background-color: $secondary-underlines;
+		width: 100%;
+		height: 1px;
+	}
+
+	.card-body-prices {
+		padding: 25px;
+		margin: 20px 10px;
+		background-color: $white;
+		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s;
+
+		h3 {
+			color: $main-color;
+			font-size: 26px;
+			text-transform: uppercase;
+		}
+
+		span {
+			font-weight: 700;
+		}
+
+		p:first-of-type {
+			margin-top: 15px;
+		}
+
+		p:last-of-type {
+			font-size: 40px;
+			font-weight: 700;
+		}
+
+		i {
+			padding-right: 8px;
+			font-size: 24px;
+		}
+
+		i:first-of-type {
+			padding-left: 8px;
+		}
+
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	p:first-of-type {
+		margin-top: 20px;
+	}
+
+	.card-body-prices:hover {
+		transform: scale(1.05);
+	}
+
+	.price-info {
+		margin-top: 30px;
+		font-size: 18px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.team {
+    position: relative;
+	background: url("/img/TeamBG.jpeg");
+    background-size: cover;
+	background-attachment: fixed;
+    z-index: 0;
+
+    .team-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        top: 0;
+        z-index: -5;
+    }
+
+    h2 {
+        color: $apps-for-users;
+    }
+
+	.container {
+		.card {
+            transition: transform 0.3s;
+
+            h5 {
+                text-align: center;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+
+            img {
+                height: 300px;
+                object-fit: cover;
+            }
+
+            i {
+                padding: 10px;
+            }
+
+            .card-body {
+                height: 160px;
+            }
+		}
+
+        .card:hover {
+            transform: scale(0.95);
+        }
+	}
+}
+
+.achievements {
+	.achievements-section {
+		padding: 30px 30px;
+	}
+
+	.icon-achievements {
+		color: #fff;
+		text-shadow: 1px 1px 2px rgb(70, 70, 70), 0 0 1em rgb(43, 43, 50), 0 0 0.2em rgb(29, 29, 52);
+		font-size: 50px;
+	}
+
+	.achievement-label {
+		text-transform: uppercase;
+	}
+}
+
+.contact {
+	position: relative;
+	padding: 30px 0;
+	color: #fff;
+	background: no-repeat center/100% url(../img/networkBig.jpeg);
+	background-attachment: fixed;
+	background-position: 0 650px;
+	z-index: 0;
+
+	h3, h2 {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	h3 {
+		letter-spacing: 2px;
+	}
+
+	.contact-shadow{
+		position: absolute;
+        width: 120%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        top: 0;
+		left: 0;
+		z-index: -2;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+	}
+
+	.social-media {
+		i {
+			font-size: 30px;
+			padding: 10px;
+		}
+	}
+
+	a {
+		transition: color 0.3s;
+	}
+
+	a:link {
+		color: #fff;
+	}
+
+	a:hover {
+		color: #999;
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+
+	header {
+		#home {
+			background: no-repeat center/140% url("/img/Programming_big.jpeg");
+		}
+	}
+	.apps-for-users {
+		background: no-repeat center/100% url("/img/Apps_big.jpeg");
+	}
+}
